@@ -9,13 +9,17 @@ of drivers (Task B), and finding the minimum number of rejected deliveries
 
 Python 3.10 or newer is required. No third-party packages or compilation are needed.
 
-From the repository root, first enter the folder containing the Python files:
+All Python files, test files, and `deliveries.txt` are in the repository root.
+Open a terminal in that folder. If you cloned the repository into your current
+directory, enter it with:
 
 ```powershell
-cd "Greedy Algorithms"
+cd "Delivery-Algorithm-Portfolio"
 ```
 
-If your terminal is already in that folder, skip the `cd` command. Then run:
+If your terminal is already in the folder containing `task_a.py`, skip the `cd`
+command. Your local folder may have a different name; use its actual name or path.
+Then run:
 
 ```text
 python task_a.py deliveries.txt
@@ -28,7 +32,8 @@ On Windows, `py` can be used instead of `python` if that is your installed launc
 
 ### Verified test run
 
-The following command was successfully run from the `Greedy Algorithms` folder:
+The following command was successfully run from the folder containing the
+program and test files:
 
 ```text
 python -m unittest -v test_task_a test_task_b test_task_c
