@@ -1,12 +1,21 @@
-# Pioneer Delivery Algorithm Portfolio: Tasks A, B, and C
+# Pioneer Delivery Algorithm Portfolio: Part I - Greedy Algorithms
 
-This Python implementation selects the maximum number of non-overlapping
-deliveries that one driver can complete. It outputs each selected delivery's ID,
-start time, finish time, and the total number selected.
+This project implements three greedy algorithms in Python: selecting the maximum
+deliveries for one driver (Task A), assigning all deliveries to the minimum number
+of drivers (Task B), and finding the minimum number of rejected deliveries
+(Task C). Task D provides a written counterexample to a profit-based greedy strategy.
 
 ## Requirements and running
 
 Python 3.10 or newer is required. No third-party packages or compilation are needed.
+
+From the repository root, first enter the folder containing the Python files:
+
+```powershell
+cd "Greedy Algorithms"
+```
+
+If your terminal is already in that folder, skip the `cd` command. Then run:
 
 ```text
 python task_a.py deliveries.txt
@@ -16,6 +25,35 @@ python -m unittest -v test_task_a test_task_b test_task_c
 ```
 
 On Windows, `py` can be used instead of `python` if that is your installed launcher.
+
+### Verified test run
+
+The following command was successfully run from the `Greedy Algorithms` folder:
+
+```text
+python -m unittest -v test_task_a test_task_b test_task_c
+```
+
+Result:
+
+```text
+test_file_input_and_validation (test_task_a.TaskATests.test_file_input_and_validation) ... ok
+test_negative_times (test_task_a.TaskATests.test_negative_times) ... ok
+test_required_cases (test_task_a.TaskATests.test_required_cases) ... ok
+test_required_cases (test_task_b.TaskBTests.test_required_cases) ... ok
+test_required_cases (test_task_c.TaskCTests.test_required_cases) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.010s
+
+OK
+```
+
+The five test methods include all 18 required assignment cases as subtests
+(six each for Tasks A, B, and C), plus file-input validation and negative-time
+checks. All passed. Task B tests also verify that every delivery is assigned
+exactly once and that each driver's schedule has no overlapping deliveries.
+Keep the three test files alongside `task_a.py`, `task_b.py`, and `task_c.py`.
 
 ## Input format
 
